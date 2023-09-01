@@ -20,10 +20,11 @@ jobs:
         uses: gha-utilities/sass-build@v0.4.7
         with:
           source: ./#source/scss/style.scss
-          destination: /css/style.css
+          destination: style.css
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./css
+      
